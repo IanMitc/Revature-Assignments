@@ -7,7 +7,6 @@ public class Query {
         Scanner scanner = new Scanner(System.in);
         System.out.print(question + ": ");
         if (!scanner.hasNextInt()) {
-            scanner.close();
             throw new Exception("Please Enter a valid Integer");
         }
         return scanner.nextInt();
@@ -17,7 +16,6 @@ public class Query {
         Scanner scanner = new Scanner(System.in);
         System.out.print(question + ": ");
         if (!scanner.hasNextDouble()) {
-            scanner.close();
             throw new Exception("Please Enter a valid Number");
         }
         return scanner.nextDouble();
@@ -27,7 +25,6 @@ public class Query {
         Scanner scanner = new Scanner(System.in);
         System.out.print(question + ": ");
         if (!scanner.hasNextLine()) {
-            scanner.close();
             throw new Exception("Please Enter a valid input");
         }
         return scanner.nextLine();
