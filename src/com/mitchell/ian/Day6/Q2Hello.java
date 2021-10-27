@@ -7,9 +7,9 @@ public class Q2Hello {
         String name = "";
         int rollId = 0;
         String interests = "";
-        boolean validInput = false;
         Scanner scanner = new Scanner(System.in);
 
+        boolean validInput = false;
         while (!validInput) {
             try {
                 name = Query.askForString("Enter your name", scanner);
@@ -26,5 +26,6 @@ public class Q2Hello {
                 + " and my roll number is " + rollId
                 + ". My field of interest are " + interests
                 + ".");
+        scanner.close();
     }
 }

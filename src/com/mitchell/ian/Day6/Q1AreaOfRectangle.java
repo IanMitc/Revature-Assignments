@@ -8,9 +8,9 @@ public class Q1AreaOfRectangle {
         double length;
         double area = 0;
         Rectangle rectangle;
-        boolean validInput = false;
         Scanner scanner = new Scanner(System.in);
 
+        boolean validInput = false;
         while (!validInput) {
             try {
                 width = Query.askForDouble("Enter the width of the Rectangle", scanner);
@@ -27,6 +27,6 @@ public class Q1AreaOfRectangle {
         }
 
         System.out.println("The approximate area of the rectangle is " + (int) area);
-
+        scanner.close();
     }
 }

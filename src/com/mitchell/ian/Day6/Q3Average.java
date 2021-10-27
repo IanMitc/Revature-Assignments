@@ -30,5 +30,6 @@ public class Q3Average {
         }
 
         System.out.println("The average is " + average);
+        scanner.close();
     }
 }
