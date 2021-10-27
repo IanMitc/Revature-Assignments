@@ -1,17 +1,20 @@
 package com.mitchell.ian.Day6;
 
+import java.util.Scanner;
+
 public class Q2Hello {
     public static void main(String[] args) {
         String name = "";
         int rollId = 0;
         String interests = "";
         boolean validInput = false;
+        Scanner scanner = new Scanner(System.in);
 
         while (!validInput) {
             try {
-                name = Query.askForString("Enter your name");
-                rollId = Query.askForInt("Enter your roll ID");
-                interests = Query.askForString("Enter your interests");
+                name = Query.askForString("Enter your name", scanner);
+                rollId = Query.askForInt("Enter your roll ID", scanner);
+                interests = Query.askForString("Enter your interests", scanner);
                 validInput = true;
             } catch (Exception e) {
                 System.out.println(e.getMessage());
