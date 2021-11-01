@@ -1,0 +1,1 @@
+create stored procedure for employees getAll, getById, update, insert, delete
