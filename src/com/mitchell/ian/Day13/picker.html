@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tier List</h1>
+    <h2>S Tier</h2>
+    <div id="STier1Div" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <h2>A Tier</h2>
+    <div id="ATier1Div" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <h2>B Tier</h2>
+    <div id="BTier1Div" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+
+    
+    <img id="bulbasaur" draggable="true" src="Images/bulbasaur.jpg" width="150" ondragstart="drag(event)" >
+    <img id="dragapult" draggable="true" src="Images/dragapult.jpg" width="150" ondragstart="drag(event)" >
+    <img id="fennekin" draggable="true" src="Images/fennekin.jpg" width="150" ondragstart="drag(event)" >
+    <img id="fish" draggable="true" src="Images/fish.jpg" width="150" ondragstart="drag(event)" >
+    <img id="mega_gyrados" draggable="true" src="Images/mega_gyrados.webp" width="150" ondragstart="drag(event)" >
+    <img id="mewtwo" draggable="true" src="Images/mewtwo.png" width="150" ondragstart="drag(event)" >
+    <img id="pikachu" draggable="true" src="Images/pikachu.webp" width="150" ondragstart="drag(event)" >
+    <img id="rockruff" draggable="true" src="Images/rockruff.png" width="150" ondragstart="drag(event)" >
+    <img id="salamence" draggable="true" src="Images/salamence.jpeg" width="150" ondragstart="drag(event)" >
+    <img id="slowpoke" draggable="true" src="Images/slowpoke.jpg" width="150" ondragstart="drag(event)" >
+    <img id="starly" draggable="true" src="Images/starly.jpeg" width="150" ondragstart="drag(event)" >
+    <img id="togekiss" draggable="true" src="Images/togekiss.jpeg" width="150" ondragstart="drag(event)" >
+    <img id="totodile" draggable="true" src="Images/totodile.jpeg" width="150" ondragstart="drag(event)" >
+    <img id="wubat" draggable="true" src="Images/wubat.webp" width="150" ondragstart="drag(event)" >
+        
+    <script> 
+        function allowDrop(event){
+            event.preventDefault()
+        }
+
+        function drag(event){
+           var id = event.target.id;
+           event.dataTransfer.setData('text', id);
+        }
+
+        function drop(event){
+            var id = event.dataTransfer.getData('text')
+            event.target.appendChild(document.getElementById(id))
+        }
+    </script>
+</body>
+</html>
