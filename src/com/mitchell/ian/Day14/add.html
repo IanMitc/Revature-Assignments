@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+</head>
+
+<body>
+    <h1>Add two numbers:</h1>
+    <input type="number" id="firstNumber" placeholder="0"><br />
+    <p>+ <input type="number" id="secondNumber" placeholder="0"></p>
+    <p id="sum">0</p>
+    <input type="button" value="Add" onclick="Add()">
+
+    <script>
+        function Add() {
+            let firstNumber = document.getElementById("firstNumber").valueAsNumber;
+            let secondNumber = document.getElementById("secondNumber").valueAsNumber;
+            document.getElementById("sum").innerHTML = firstNumber + secondNumber;
+        }
+    </script>
+</body>
+
+</html>
