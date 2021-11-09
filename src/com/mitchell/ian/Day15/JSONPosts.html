@@ -35,7 +35,6 @@
                     console.log(response);
 
                     for (let post of response) {
-                        // let postObject = JSON.parse(post);
                         console.log(post);
                         newTableHTML += `
                         <tr>
@@ -45,8 +44,8 @@
                             <td>` + post.body + `</td>
                         </tr>
                         `;
-                        console.log(newTableHTML);
                     }
+                    console.log(newTableHTML);
                     document.getElementById("tableRows").innerHTML = newTableHTML;
                 }
             }
