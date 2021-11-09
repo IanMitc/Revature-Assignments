@@ -10,7 +10,7 @@
 
 <body>
     <h1>Posts</h1>
-    <table border="1">
+    <table border="1" id="posts">
         <thead>
             <th>User ID</th>
             <th>Post ID</th>
@@ -30,23 +30,25 @@
 
             request.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
-                    let newTableHTML = "";
+                    let table = document.getElementById("posts");
                     let response = JSON.parse(this.responseText);
                     console.log(response);
 
                     for (let post of response) {
                         console.log(post);
-                        newTableHTML += `
-                        <tr>
-                            <td>${post.userId}</td>
-                            <td>${post.id}</td>
-                            <td>${post.title}</td>
-                            <td>${post.body}</td>
-                        </tr>
-                        `;
+                        let row = table.insertRow(-1);
+                        let userId = row.insertCell(0);
+                        let id = row.insertCell(1);
+                        let title = row.insertCell(2);
+                        let body = row.insertCell(3);
+
+                        userId.innerHTML = post.userId;
+                        id.innerHTML = post.id;
+                        title.innerHTML = post.title;
+                        body.innerHTML = post.body;
                     }
-                    console.log(newTableHTML);
-                    document.getElementById("tableRows").innerHTML = newTableHTML;
+                    //console.log(newTableHTML);
+                    //document.getElementById("tableRows").innerHTML = newTableHTML;
                 }
             }
             request.send();
