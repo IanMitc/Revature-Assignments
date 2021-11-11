@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+        body {
+            background-color: #000;
+            font-family: 'Mukta', sans-serif;
+        }
+
+        .login {
+            width: 15%;
+            min-width: 300px;
+            min-height: 300px;
+            color: #050517;
+            background-color: #7BB2D9;
+            box-shadow: 10px 6px #327AAE;
+            margin: auto;
+            margin-top: 20%;
+            padding: 2%;
+            padding-top: 1%;
+            border-radius: 6%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            border: none;
+            padding: 2%;
+            box-sizing: border-box;
+            border-radius: 15px;
+        }
+
+        input[type="button"] {
+            font-weight: bold;
+            border: none;
+            margin-left:25%;
+            margin-top: 10%;
+            padding: 5%;
+            text-align: center;
+            width: 50%;
+            border-radius: 15px;
+            text-transform: uppercase;
+            box-sizing: border-box;
+        }
+
+        input[type="button"]:hover{
+            background-color: #A1CCA5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login" id="login">
+        <h1>Login</h1>
+        <form action="">
+            <div>
+                <label for="email">Email</label><br>
+                <input type="text" id="email">
+            </div>
+            <div>
+                <label for="password">Password</label><br>
+                <input type="password" id="password">
+            </div>
+            <input type="button" value="Login" />
+        </form>
+    </div>
+</body>
+
+</html>
