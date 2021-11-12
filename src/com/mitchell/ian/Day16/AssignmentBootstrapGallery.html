@@ -32,7 +32,6 @@
         function onClick() {
             var displayData = document.getElementById('displayData');
 
-
             fetch('https://jsonplaceholder.typicode.com/photos')
                 .then(response => response.json())
                 .then(function (pictures) {
